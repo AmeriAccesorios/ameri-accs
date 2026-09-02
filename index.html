@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ameri Accesorios — Accesorios que hablan de vos</title>
+<style>
+:root{
+  --black:#0c0b0b; --cream:#f4ede7; --paper:#fbf8f5;
+  --pink:#e9d2d2; --pink2:#d9b6bc; --ink:#1b1818; --line:#d9c8c1;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+.serif{font-family:Georgia,"Times New Roman",serif}
+header{position:sticky;top:0;z-index:20;background:rgba(12,11,11,.96);color:#fff;border-bottom:1px solid #332d2d}
+.nav{max-width:1180px;margin:auto;padding:14px 24px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+.brand img{width:74px;height:52px;object-fit:contain;filter:brightness(0) invert(1)}
+.brand b{font-family:Georgia,serif;font-size:24px;letter-spacing:-1px}
+.brand small{display:block;font-size:8px;letter-spacing:2px;margin-top:-4px}
+nav a{font-size:13px;letter-spacing:.04em;color:#fff;opacity:.95;margin-left:18px}
+nav a:hover{opacity:.65}
+.hero{background:var(--black);color:#fff;position:relative;overflow:hidden}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:44% 56%;min-height:500px}
+.hero-copy{padding:72px 24px 56px 24px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero-copy h1{font-size:54px;line-height:.95;font-weight:400;margin:0 0 24px;max-width:520px}
+.hero-copy p{font-size:16px;line-height:1.55;max-width:450px;color:#eee}
+.cta{display:inline-flex;width:max-content;background:var(--pink);color:#1b1818;padding:13px 20px;border-radius:26px;font-weight:700;font-size:13px;margin-top:18px}
+.hero-photo{min-height:500px;background:
+ radial-gradient(circle at 20% 25%,rgba(233,210,210,.22),transparent 22%),
+ linear-gradient(135deg,#f4eee9,#d7ccc6);
+ position:relative;overflow:hidden}
+.hero-photo:before{content:"";position:absolute;inset:10% 8%;border-radius:20px 55% 55% 20px;
+ background:
+ radial-gradient(circle at 50% 60%,#111 0 5%,transparent 6%),
+ radial-gradient(circle at 60% 42%,#2b2523 0 4%,transparent 5%),
+ linear-gradient(135deg,#fff,#d8cec6);
+ box-shadow:0 24px 55px rgba(0,0,0,.16)}
+.hero-photo:after{content:"AMERI";position:absolute;right:10%;top:9%;background:#0c0b0b;color:#fff;padding:16px 20px;font-family:Georgia,serif;font-size:28px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.doodle{position:absolute;color:#fff;font-family:Georgia,serif;opacity:.9}
+.d1{left:30px;top:34px;font-size:30px}.d2{left:45%;bottom:28px;font-size:26px}.d3{right:28px;top:38px;font-size:26px}
+.section{padding:58px 24px}
+.section.alt{background:var(--cream)}
+.wrap{max-width:1180px;margin:auto}
+.section-title{text-align:center;font-size:38px;font-weight:400;margin:0 0 34px}
+.section-title:after{content:"✦";display:block;font-size:18px;margin-top:8px}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-align:center;transition:.2s}
+.cat:hover{transform:translateY(-2px)}
+.cat-art{height:150px;background:linear-gradient(135deg,#efe6e2,#d9c4c6);display:flex;align-items:center;justify-content:center;font-size:58px}
+.cat h3{margin:16px 12px 8px;font-size:15px;letter-spacing:.04em}
+.cat p{font-size:13px;color:#675d59;margin:0 16px 20px;line-height:1.45}
+.products{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.product-art{aspect-ratio:1/1;background:linear-gradient(135deg,#ede3dd,#cfb9b2);display:flex;align-items:center;justify-content:center;position:relative;font-family:Georgia,serif}
+.product-art span{font-size:54px}
+.card-body{padding:12px}
+.card h4{font-size:14px;margin:0 0 6px}
+.price{font-weight:700;font-size:14px}
+.buy{display:block;text-align:center;background:#0c0b0b;color:#fff;padding:10px;border-radius:9px;margin-top:12px;font-size:12px;letter-spacing:.04em}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
+.about-copy h2{font-size:44px;font-weight:400;margin:0 0 14px}
+.about-copy p{line-height:1.7;color:#554c48}
+.about-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.about-shot{height:220px;border-radius:14px;background:linear-gradient(135deg,#efe6e2,#baa5a0)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{color:#fff;text-align:center;padding:8px 14px 26px}
+.step-icon{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:var(--pink);color:#0c0b0b;display:flex;align-items:center;justify-content:center;font-size:25px}
+.step h3{font-size:13px;letter-spacing:.05em;margin:0 0 8px}
+.step p{font-size:13px;line-height:1.5;color:#ddd}
+.dark{background:var(--black);color:#fff}
+.footer{background:#0c0b0b;color:#fff;padding:42px 24px 22px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:30px}
+.footer h4{margin:0 0 13px;font-size:13px;letter-spacing:.08em}
+.footer p,.footer a{font-size:12px;color:#d8d0cd;line-height:1.7}
+.bottom{border-top:1px solid #2b2626;margin-top:30px;padding-top:15px;text-align:center;font-size:11px;color:#aaa}
+@media(max-width:900px){
+ .hero-inner{grid-template-columns:1fr}.hero-copy{padding:54px 24px}.hero-photo{min-height:340px}
+ .categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}
+ .about{grid-template-columns:1fr}.about-gallery{grid-template-columns:repeat(3,1fr)}
+ .steps{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}
+ nav a{margin-left:8px;font-size:11px}
+}
+@media(max-width:560px){
+ .nav{padding:10px 14px}.brand b{font-size:21px}.brand img{width:60px}
+ nav{display:none}.hero-copy h1{font-size:42px}.section{padding:44px 16px}
+ .categories,.products,.about-gallery,.steps,.footer-grid{grid-template-columns:1fr}
+ .product-art{aspect-ratio:1.15/1}.about-gallery .about-shot{height:180px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="logo-ameri.png" alt="Ameri Accesorios">
+      <div><b>Ameri</b><small>ACCESORIOS</small></div>
+    </div>
+    <nav>
+      <a href="#inicio">INICIO</a><a href="#accesorios">ACCESORIOS</a><a href="#papeleria">PAPELERÍA</a>
+      <a href="#colecciones">COLECCIONES</a><a href="#como-comprar">CÓMO COMPRAR</a><a href="#contacto">CONTACTO</a>
+    </nav>
+  </div>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="doodle d1">✦</div>
+      <h1 class="serif">ACCESORIOS<br>QUE HABLAN<br>DE VOS.</h1>
+      <p>Accesorios únicos, papelería creativa y detalles para expresar tu estilo.</p>
+      <a class="cta" href="#accesorios">VER COLECCIÓN ✦</a>
+      <div class="doodle d2">♡</div>
+    </div>
+    <div class="hero-photo"><div class="doodle d3">✦</div></div>
+  </div>
+</section>
+
+<section class="section" id="accesorios">
+<div class="wrap">
+<h2 class="section-title serif">EXPLORÁ AMERI</h2>
+<div class="categories">
+  <div class="cat"><div class="cat-art">♡</div><h3>ACCESORIOS</h3><p>Collares, pulseras, anillos y más.</p></div>
+  <div class="cat" id="papeleria"><div class="cat-art">✎</div><h3>PAPELERÍA</h3><p>Stickers, libretas, papeles y más.</p></div>
+  <div class="cat"><div class="cat-art">★</div><h3>NOVEDADES</h3><p>Lo último que llegó a Ameri.</p></div>
+  <div class="cat" id="colecciones"><div class="cat-art">🎀</div><h3>COLECCIONES</h3><p>Descubrí nuestras colecciones especiales.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section alt">
+<div class="wrap">
+<h2 class="section-title serif">DESTACADOS</h2>
+<div class="products">
+  <article class="card"><div class="product-art"><span>♡</span></div><div class="card-body"><h4>Collar black heart</h4><div class="price">$7.500</div><a class="buy" href="#como-comprar">COMPRAR 🛍</a></div></article>
+  <article class="card"><div class="product-art"><span>🍒</span></div><div class="card-body"><h4>Llavero cherry bear</h4><div class="price">$5.000</div><a class="buy" href="#como-comprar">COMPRAR 🛍</a></div></article>
+  <article class="card"><div class="product-art"><span>★</span></div><div class="card-body"><h4>Set hebillas star</h4><div class="price">$3.500</div><a class="buy" href="#como-comprar">COMPRAR 🛍</a></div></article>
+  <article class="card"><div class="product-art"><span>▤</span></div><div class="card-body"><h4>Libreta cherry</h4><div class="price">$6.000</div><a class="buy" href="#como-comprar">COMPRAR 🛍</a></div></article>
+  <article class="card"><div class="product-art"><span>☆</span></div><div class="card-body"><h4>Collar star</h4><div class="price">$6.500</div><a class="buy" href="#como-comprar">COMPRAR 🛍</a></div></article>
+</div>
+<div style="text-align:center;margin-top:24px"><a class="cta" style="background:transparent;border:1px solid #0c0b0b" href="#accesorios">VER TODOS LOS PRODUCTOS ✦</a></div>
+</div>
+</section>
+
+<section class="section dark">
+<div class="wrap about">
+  <div class="about-copy">
+    <h2 class="serif">AMERI ✦</h2>
+    <p>Somos un emprendimiento de accesorios y papelería creativa pensado para acompañar tu día a día con detalles que te representan.</p>
+    <a class="cta" href="#contacto">CONOCÉ MÁS SOBRE AMERI →</a>
+  </div>
+  <div class="about-gallery">
+    <div class="about-shot"></div><div class="about-shot"></div><div class="about-shot"></div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="como-comprar" style="background:var(--cream)">
+<div class="wrap">
+<h2 class="section-title serif">¿CÓMO COMPRAR?</h2>
+<div class="steps">
+  <div class="step dark"><div class="step-icon">🛍</div><h3>1. ELEGÍ</h3><p>Elegí tu producto favorito.</p></div>
+  <div class="step dark"><div class="step-icon">◉</div><h3>2. CONSULTÁ</h3><p>Escribinos por WhatsApp o Instagram para consultar disponibilidad.</p></div>
+  <div class="step dark"><div class="step-icon">▣</div><h3>3. CONFIRMAMOS</h3><p>Te confirmamos el pedido, el total y los medios de pago.</p></div>
+  <div class="step dark"><div class="step-icon">🚚</div><h3>4. RECIBÍ TU PEDIDO</h3><p>Coordinamos el envío o retiro y listo.</p></div>
+</div>
+</div>
+</section>
+
+<footer class="footer" id="contacto">
+<div class="wrap footer-grid">
+  <div><h4 class="serif" style="font-size:30px">Ameri</h4><p>Accesorios, papelería creativa y detalles únicos para acompañar tu día a día.</p></div>
+  <div><h4>NAVEGACIÓN</h4><p><a href="#inicio">Inicio</a><br><a href="#accesorios">Accesorios</a><br><a href="#papeleria">Papelería</a><br><a href="#colecciones">Colecciones</a><br><a href="#como-comprar">Cómo comprar</a></p></div>
+  <div><h4>INFORMACIÓN</h4><p>Envíos<br>Formas de pago<br>Preguntas frecuentes<br>Políticas de cambio</p></div>
+  <div><h4>CONTACTO</h4><p>WhatsApp: +54 9 34 2 123 4567<br>Instagram: @ameri_accs<br>San Javier, Santa Fe</p></div>
+</div>
+<div class="bottom">© 2026 Ameri Accesorios. Todos los derechos reservados.</div>
+</footer>
+</body>
+</html>
