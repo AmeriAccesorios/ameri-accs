@@ -16,6 +16,14 @@
       "price": "$100",
       "description": "Prueba ",
       "category": "Accesorios"
+    },
+    {
+      "available": true,
+      "featured": false,
+      "title": "Stickers ",
+      "price": "$1000",
+      "description": "A",
+      "category": "Papelería"
     }
   ]
 }
