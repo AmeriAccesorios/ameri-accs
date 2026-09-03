@@ -1,17 +1,8 @@
-# Ameri Accesorios — prototipo web
+AMERI — versión preparada para panel administrativo
 
-Este archivo es un prototipo visual para usar como guía al construir el sitio en Google Sites.
+Subir el contenido de esta carpeta al repositorio ameri-accs manteniendo la estructura.
+El panel quedará en /admin/ y usará Decap CMS con GitHub.
+La web lee productos desde content/products.json y textos desde content/site.json.
+Las imágenes del CMS se guardan en uploads/.
 
-## Estructura
-- Inicio / hero
-- Categorías
-- Productos destacados
-- Presentación de la marca
-- Cómo comprar
-- Contacto y pie de página
-
-## Para Google Sites
-Google Sites no permite pegar esta página HTML completa como una tienda nativa. La forma correcta es reproducir las secciones visuales dentro del editor de Google Sites y usar botones/enlaces hacia WhatsApp o un formulario para tomar pedidos.
-
-## Próximo paso recomendado
-Reemplazar los productos de ejemplo por fotos reales, nombres, precios, disponibilidad y el enlace de WhatsApp/Instagram de Ameri.
+Importante: antes de intentar iniciar sesión en /admin/, hay que configurar el proveedor OAuth de GitHub en Netlify. No compartas nunca tu Client Secret aquí.

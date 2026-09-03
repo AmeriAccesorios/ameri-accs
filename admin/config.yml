@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: https://neon-starburst-54ce7e.netlify.app
+
+collections:
+  - name: "products"
+    label: "Productos"
+    description: "Agregá, editá o quitá productos del catálogo."
+    files:
+      - label: "Catálogo de productos"
+        name: "catalog"
+        file: "content/products.json"
+        fields:
+          - label: "Productos"
+            name: "products"
+            widget: "list"
+            allow_add: true
+            allow_delete: true
+            fields:
+              - { label: "Nombre", name: "title", widget: "string" }
+              - { label: "Precio", name: "price", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Categoría", name: "category", widget: "select", options: ["Accesorios", "Papelería", "Novedades", "Colecciones"] }
+              - { label: "Imagen", name: "image", widget: "image", required: false }
+              - { label: "Disponible", name: "available", widget: "boolean", default: true }
+              - { label: "Mostrar en destacados", name: "featured", widget: "boolean", default: false }
+
+  - name: "site"
+    label: "Página"
+    description: "Editá los textos principales y los datos de contacto."
+    files:
+      - label: "Contenido general"
+        name: "general"
+        file: "content/site.json"
+        fields:
+          - { label: "Título principal", name: "hero_title", widget: "string" }
+          - { label: "Texto principal", name: "hero_text", widget: "text" }
+          - { label: "Título Sobre Ameri", name: "about_title", widget: "string" }
+          - { label: "Texto Sobre Ameri", name: "about_text", widget: "text" }
+          - { label: "WhatsApp (solo números)", name: "whatsapp", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "Ubicación", name: "location", widget: "string" }
