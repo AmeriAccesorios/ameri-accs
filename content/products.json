@@ -1,29 +1,31 @@
-[
-  {
-    "title": "Collar Black Heart",
-    "price": "$7.500",
-    "description": "Collar delicado con detalle de corazón negro.",
-    "category": "Accesorios",
-    "image": "",
-    "available": true,
-    "featured": true
-  },
-  {
-    "title": "Llavero Cherry Bear",
-    "price": "$5.000",
-    "description": "Llavero tierno inspirado en cerezas y ositos.",
-    "category": "Accesorios",
-    "image": "",
-    "available": true,
-    "featured": true
-  },
-  {
-    "title": "Set Hebillas Star",
-    "price": "$3.500",
-    "description": "Set de hebillas con detalles de estrellas.",
-    "category": "Accesorios",
-    "image": "",
-    "available": true,
-    "featured": true
-  }
-]
+{
+  "products": [
+    {
+      "title": "Collar Black Heart",
+      "price": "$7.500",
+      "description": "Collar delicado con detalle de corazón negro.",
+      "category": "Accesorios",
+      "image": "",
+      "available": true,
+      "featured": true
+    },
+    {
+      "title": "Llavero Cherry Bear",
+      "price": "$5.000",
+      "description": "Llavero tierno inspirado en cerezas y ositos.",
+      "category": "Accesorios",
+      "image": "",
+      "available": true,
+      "featured": true
+    },
+    {
+      "title": "Set Hebillas Star",
+      "price": "$3.500",
+      "description": "Set de hebillas con detalles de estrellas.",
+      "category": "Accesorios",
+      "image": "",
+      "available": true,
+      "featured": true
+    }
+  ]
+}
