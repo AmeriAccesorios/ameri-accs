@@ -8,6 +8,14 @@
       "description": "Especial para dáas de sol ",
       "category": "Accesorios",
       "image": "/uploads/lentes.jpeg"
+    },
+    {
+      "available": true,
+      "featured": true,
+      "title": "Prueba ",
+      "price": "$100",
+      "description": "Prueba ",
+      "category": "Accesorios"
     }
   ]
 }
