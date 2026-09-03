@@ -22,31 +22,183 @@ header{position:sticky;top:0;z-index:20;background:rgba(12,11,11,.97);color:#fff
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-photo{min-height:340px}.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}nav a{font-size:11px}}
 @media(max-width:560px){nav{display:none}.hero-copy h1{font-size:42px}.section{padding:44px 16px}.categories,.products,.about-gallery,.steps,.footer-grid{grid-template-columns:1fr}}
 
-.eyebrow{font-size:10px;letter-spacing:.18em;font-weight:700;color:#8a6f70}.eyebrow.light{color:#d9b6bc}
-.catalog-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:24px}.catalog-sub{margin:0;color:#756a65;font-size:14px}
-.search-box{background:#fff;border:1px solid #d7cbc4;border-radius:12px;display:flex;align-items:center;padding:0 13px;width:min(330px,100%);height:46px;box-shadow:0 7px 20px rgba(0,0,0,.04)}.search-box span{font-size:20px;color:#81736e;margin-right:8px}.search-box input{border:0;outline:none;background:transparent;font-size:13px;width:100%;color:#1b1818}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}.filter{border:1px solid #cfbfba;background:transparent;color:#3c3431;border-radius:22px;padding:9px 15px;font-size:12px;cursor:pointer}.filter:hover,.filter.active{background:#0c0b0b;color:#fff;border-color:#0c0b0b}
-.products.storefront{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.storefront .card{border-radius:12px;box-shadow:0 10px 30px rgba(38,26,22,.06);transition:transform .2s ease,box-shadow .2s ease}.storefront .card:hover{transform:translateY(-4px);box-shadow:0 17px 35px rgba(38,26,22,.12)}.storefront .product-art{background:#eee7e1;position:relative}.storefront .card-body{padding:15px}.storefront .price{font-family:Georgia,serif;font-size:16px}.storefront .buy{background:transparent;color:#111;border:1px solid #bcaeaa}.storefront .buy:hover{background:#0c0b0b;color:#fff}
-.product-badge{position:absolute;left:10px;top:10px;background:#fff;padding:6px 8px;border-radius:99px;font-size:9px;letter-spacing:.08em;text-transform:uppercase}.product-meta{font-size:11px;color:#8a7d77;margin-top:5px}.empty-state{padding:46px 20px;text-align:center;border:1px dashed #cfc0b9;border-radius:14px;color:#766b67}.featured-bar{display:flex;justify-content:space-between;align-items:center;gap:20px}.featured-bar h2{font-size:36px;font-weight:400;margin:4px 0 0}
-@media(max-width:900px){.products.storefront{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-head{align-items:flex-start;flex-direction:column}.search-box{width:100%}.featured-bar{align-items:flex-start;flex-direction:column}}
-@media(max-width:560px){.products.storefront{grid-template-columns:1fr}.filters{gap:6px}.filter{padding:8px 12px}}
+.eyebrow{font-size:10px;letter-spacing:.18em;font-weight:700;color:#8a6f70}
+.catalog-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:24px}
+.catalog-sub{margin:0;color:#756a65;font-size:14px}
+.search-box{background:#fff;border:1px solid #d7cbc4;border-radius:12px;display:flex;align-items:center;padding:0 13px;width:min(330px,100%);height:46px;box-shadow:0 7px 20px rgba(0,0,0,.04)}
+.search-box span{font-size:20px;color:#81736e;margin-right:8px}
+.search-box input{border:0;outline:none;background:transparent;font-size:13px;width:100%;color:#1b1818}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.filter{border:1px solid #cfbfba;background:transparent;color:#3c3431;border-radius:22px;padding:9px 15px;font-size:12px;cursor:pointer}
+.filter:hover,.filter.active{background:#0c0b0b;color:#fff;border-color:#0c0b0b}
+.products.storefront{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.storefront .card{border-radius:12px;box-shadow:0 10px 30px rgba(38,26,22,.06);transition:transform .2s ease,box-shadow .2s ease}
+.storefront .card:hover{transform:translateY(-4px);box-shadow:0 17px 35px rgba(38,26,22,.12)}
+.storefront .buy{background:transparent;color:#111;border:1px solid #bcaeaa}
+.storefront .buy:hover{background:#0c0b0b;color:#fff}
+.category-link{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.category-link:hover,.category-link:focus{transform:translateY(-3px);box-shadow:0 12px 26px rgba(38,26,22,.10);outline:none}
+.empty-state{padding:46px 20px;text-align:center;border:1px dashed #cfc0b9;border-radius:14px;color:#766b67}
+@media(max-width:900px){.products.storefront{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-head{align-items:flex-start;flex-direction:column}.search-box{width:100%}}
+@media(max-width:560px){.products.storefront{grid-template-columns:1fr}}
 </style></head>
 <body>
-<header><div class="nav"><div class="brand"><img src="logo-ameri.png" alt="Ameri"><div><b>Ameri</b><small>ACCESORIOS</small></div></div><nav><a href="#inicio">INICIO</a><a href="#catalogo">CATÁLOGO</a><a href="#destacados">DESTACADOS</a><a href="#como-comprar">CÓMO COMPRAR</a><a href="#contacto">CONTACTO</a></nav></div></header>
+<header><div class="nav"><div class="brand"><img src="logo-ameri.png" alt="Ameri"><div><b>Ameri</b><small>ACCESORIOS</small></div></div><nav><a href="#inicio">INICIO</a><a href="#catalogo">CATÁLOGO</a><a href="#como-comprar">CÓMO COMPRAR</a><a href="#contacto">CONTACTO</a></nav></div></header>
 <section id="inicio" class="hero"><div class="hero-inner"><div class="hero-copy"><h1 class="serif" id="hero-title">ACCESORIOS QUE HABLAN DE VOS.</h1><p id="hero-text">Accesorios únicos, papelería creativa y detalles para expresar tu estilo.</p><a class="cta" href="#catalogo">VER COLECCIÓN ✦</a></div><div class="hero-photo"></div></div></section>
-<section class="section" id="accesorios"><div class="wrap"><h2 class="section-title serif">EXPLORÁ AMERI</h2><div class="categories"><div class="cat"><div class="cat-art">♡</div><h3>ACCESORIOS</h3><p>Collares, pulseras, anillos y más.</p></div><div class="cat"><div class="cat-art">✎</div><h3>PAPELERÍA</h3><p>Stickers, libretas, papeles y más.</p></div><div class="cat"><div class="cat-art">★</div><h3>NOVEDADES</h3><p>Lo último que llegó a Ameri.</p></div><div class="cat"><div class="cat-art">🎀</div><h3>COLECCIONES</h3><p>Descubrí nuestras colecciones especiales.</p></div></div></div></section>
-<section class="section alt" id="catalogo"><div class="wrap">
-<div class="catalog-head"><div><span class="eyebrow">AMERI / SHOP</span><h2 class="section-title serif" style="text-align:left;margin:6px 0 8px">CATÁLOGO</h2><p class="catalog-sub">Elegí tus favoritos y consultá disponibilidad por WhatsApp.</p></div><div class="search-box"><span>⌕</span><input id="product-search" type="search" placeholder="Buscar productos..." aria-label="Buscar productos"></div></div>
-<div class="filters" id="filters"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Accesorios">Accesorios</button><button class="filter" data-filter="Papelería">Papelería</button><button class="filter" data-filter="Novedades">Novedades</button><button class="filter" data-filter="Colecciones">Colecciones</button></div>
-<div class="products storefront" id="products"></div><div class="empty-state" id="empty-state" hidden>No encontramos productos con esos criterios.</div>
-</div></section>
-<section class="section" style="background:var(--black);color:#fff" id="destacados"><div class="wrap"><div class="featured-bar"><div><span class="eyebrow light">SELECCIÓN AMERI</span><h2 class="serif">Favoritos de la semana</h2></div><a class="cta" href="#catalogo">VER CATÁLOGO ✦</a></div></div></section>
+<section class="section" id="accesorios"><div class="wrap"><h2 class="section-title serif">EXPLORÁ AMERI</h2><div class="categories">
+<div class="cat category-link" data-filter="Accesorios" role="button" tabindex="0"><div class="cat-art">♡</div><h3>ACCESORIOS</h3><p>Collares, pulseras, anillos y más.</p></div>
+<div class="cat category-link" data-filter="Papelería" role="button" tabindex="0"><div class="cat-art">✎</div><h3>PAPELERÍA</h3><p>Stickers, libretas, papeles y más.</p></div>
+<div class="cat category-link" data-filter="Novedades" role="button" tabindex="0"><div class="cat-art">★</div><h3>NOVEDADES</h3><p>Lo último que llegó a Ameri.</p></div>
+<div class="cat category-link" data-filter="Colecciones" role="button" tabindex="0"><div class="cat-art">🎀</div><h3>COLECCIONES</h3><p>Descubrí nuestras colecciones especiales.</p></div>
+</div></div></section>
+<section class="section alt" id="catalogo">
+  <div class="wrap">
+    <div class="catalog-head">
+      <div>
+        <span class="eyebrow">AMERI / CATÁLOGO</span>
+        <h2 class="section-title serif" style="text-align:left;margin-bottom:8px">PRODUCTOS</h2>
+        <p class="catalog-sub">Encontrá tus favoritos y consultá disponibilidad por WhatsApp.</p>
+      </div>
+      <div class="search-box"><span>⌕</span><input id="product-search" type="search" placeholder="Buscar productos..." aria-label="Buscar productos"></div>
+    </div>
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="Todos">Todos</button>
+      <button class="filter" data-filter="Accesorios">Accesorios</button>
+      <button class="filter" data-filter="Papelería">Papelería</button>
+      <button class="filter" data-filter="Novedades">Novedades</button>
+      <button class="filter" data-filter="Colecciones">Colecciones</button>
+    </div>
+    <div class="products storefront" id="products"></div>
+    <div class="empty-state" id="empty-state" hidden>No encontramos productos con esos criterios.</div>
+  </div>
+</section>
 <section class="section" style="background:var(--black);color:#fff"><div class="wrap about"><div class="about-copy"><h2 class="serif" id="about-title">AMERI ✦</h2><p id="about-text">Somos un emprendimiento de accesorios y papelería creativa pensado para acompañar tu día a día con detalles que te representan.</p></div><div class="about-gallery"><div class="about-shot"></div><div class="about-shot"></div><div class="about-shot"></div></div></div></section>
 <section class="section" id="como-comprar" style="background:var(--cream)"><div class="wrap"><h2 class="section-title serif">¿CÓMO COMPRAR?</h2><div class="steps"><div class="step"><div class="step-icon">🛍</div><h3>1. ELEGÍ</h3><p>Elegí tu producto favorito.</p></div><div class="step"><div class="step-icon">◉</div><h3>2. CONSULTÁ</h3><p>Escribinos por WhatsApp o Instagram para consultar disponibilidad.</p></div><div class="step"><div class="step-icon">▣</div><h3>3. CONFIRMAMOS</h3><p>Te confirmamos el pedido, el total y los medios de pago.</p></div><div class="step"><div class="step-icon">🚚</div><h3>4. RECIBÍ</h3><p>Coordinamos el envío o retiro.</p></div></div></div></section>
 <footer class="footer" id="contacto"><div class="wrap footer-grid"><div><h4 class="serif" style="font-size:30px">Ameri</h4><p>Accesorios, papelería creativa y detalles únicos.</p></div><div><h4>NAVEGACIÓN</h4><p><a href="#inicio">Inicio</a><br><a href="#accesorios">Accesorios</a><br><a href="#como-comprar">Cómo comprar</a></p></div><div><h4>INFORMACIÓN</h4><p>Envíos<br>Formas de pago<br>Preguntas frecuentes</p></div><div><h4>CONTACTO</h4><p>WhatsApp: <a id="wa-link" href="#">Consultar</a><br>Instagram: <span id="instagram">@ameri_accs</span><br><span id="location">San Javier, Santa Fe</span></p></div></div><div class="bottom">© 2026 Ameri Accesorios</div></footer>
 <script>
-let allProducts=[];let activeFilter='Todos';let waNumber='';
-async function loadData(){try{const [siteRes,prodRes]=await Promise.all([fetch('content/site.json',{cache:'no-store'}),fetch('content/products.json',{cache:'no-store'})]);const site=await siteRes.json();const raw=await prodRes.json();allProducts=Array.isArray(raw)?raw:(raw.products||[]);document.getElementById('hero-title').textContent=site.hero_title||'';document.getElementById('hero-text').textContent=site.hero_text||'';document.getElementById('about-title').textContent=site.about_title||'';document.getElementById('about-text').textContent=site.about_text||'';document.getElementById('instagram').textContent=site.instagram||'';document.getElementById('location').textContent=site.location||'';waNumber=String(site.whatsapp||'').replace(/\D/g,'');renderProducts();}catch(e){console.error(e)}}
-function renderProducts(){const q=document.getElementById('product-search').value.trim().toLowerCase();const list=allProducts.filter(p=>{const available=p.available!==false;const categoryOk=activeFilter==='Todos'||p.category===activeFilter;const text=`${p.title||''} ${p.description||''} ${p.category||''}`.toLowerCase();return available&&categoryOk&&text.includes(q)});const root=document.getElementById('products');const empty=document.getElementById('empty-state');root.innerHTML='';empty.hidden=list.length!==0;list.forEach(p=>{const article=document.createElement('article');article.className='card';const art=document.createElement('div');art.className='product-art';if(p.featured){const badge=document.createElement('span');badge.className='product-badge';badge.textContent='Destacado';art.appendChild(badge)}if(p.image){const img=document.createElement('img');img.src=p.image;img.alt=p.title||'Producto Ameri';art.appendChild(img)}else{const ph=document.createElement('div');ph.className='placeholder';ph.textContent='♡';art.appendChild(ph)}const body=document.createElement('div');body.className='card-body';const title=document.createElement('h4');title.textContent=p.title||'';const meta=document.createElement('div');meta.className='product-meta';meta.textContent=p.category||'';const price=document.createElement('div');price.className='price';price.textContent=p.price||'';const buy=document.createElement('a');buy.className='buy';buy.target='_blank';buy.href=waNumber?`https://wa.me/${waNumber}?text=${encodeURIComponent('Hola Ameri! Quiero consultar por: '+(p.title||''))}`:'#';buy.textContent='CONSULTAR POR WHATSAPP';body.append(title,meta,price,buy);article.append(art,body);root.appendChild(article)});}
-document.addEventListener('DOMContentLoaded',()=>{document.getElementById('product-search').addEventListener('input',renderProducts);document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeFilter=btn.dataset.filter;renderProducts();}))});loadData();
+let allProducts = [];
+let activeFilter = 'Todos';
+let waNumber = '';
+
+async function loadData(){
+  try{
+    const [siteRes, prodRes] = await Promise.all([
+      fetch('content/site.json', {cache:'no-store'}),
+      fetch('content/products.json', {cache:'no-store'})
+    ]);
+    const site = await siteRes.json();
+    const raw = await prodRes.json();
+    allProducts = Array.isArray(raw) ? raw : (raw.products || []);
+
+    document.getElementById('hero-title').textContent = site.hero_title || '';
+    document.getElementById('hero-text').textContent = site.hero_text || '';
+    document.getElementById('about-title').textContent = site.about_title || '';
+    document.getElementById('about-text').textContent = site.about_text || '';
+    document.getElementById('instagram').textContent = site.instagram || '';
+    document.getElementById('location').textContent = site.location || '';
+
+    waNumber = String(site.whatsapp || '').replace(/\D/g,'');
+    const waLink = document.getElementById('wa-link');
+    waLink.href = waNumber
+      ? `https://wa.me/${waNumber}?text=${encodeURIComponent('Hola Ameri! Quiero consultar por un producto.')}`
+      : '#';
+
+    renderProducts();
+  }catch(e){
+    console.error('No se pudieron cargar los contenidos', e);
+  }
+}
+
+function renderProducts(){
+  const search = (document.getElementById('product-search')?.value || '').trim().toLowerCase();
+  const list = allProducts.filter(p => {
+    if (p.available === false) return false;
+    const categoryOk = activeFilter === 'Todos' || p.category === activeFilter;
+    const text = `${p.title || ''} ${p.description || ''} ${p.category || ''}`.toLowerCase();
+    return categoryOk && text.includes(search);
+  });
+
+  const root = document.getElementById('products');
+  const empty = document.getElementById('empty-state');
+  root.innerHTML = '';
+  empty.hidden = list.length !== 0;
+
+  list.forEach(p => {
+    const article = document.createElement('article');
+    article.className = 'card';
+
+    const art = document.createElement('div');
+    art.className = 'product-art';
+
+    if (p.featured) {
+      const badge = document.createElement('span');
+      badge.className = 'product-badge';
+      badge.textContent = 'Destacado';
+      art.appendChild(badge);
+    }
+
+    if (p.image) {
+      const img = document.createElement('img');
+      img.src = p.image;
+      img.alt = p.title || 'Producto Ameri';
+      art.appendChild(img);
+    } else {
+      const ph = document.createElement('div');
+      ph.className = 'placeholder';
+      ph.textContent = '♡';
+      art.appendChild(ph);
+    }
+
+    const body = document.createElement('div');
+    body.className = 'card-body';
+
+    const title = document.createElement('h4');
+    title.textContent = p.title || '';
+
+    const price = document.createElement('div');
+    price.className = 'price';
+    price.textContent = p.price || '';
+
+    const buy = document.createElement('a');
+    buy.className = 'buy';
+    buy.target = '_blank';
+    buy.href = waNumber
+      ? `https://wa.me/${waNumber}?text=${encodeURIComponent('Hola Ameri! Quiero consultar por: ' + (p.title || ''))}`
+      : '#';
+    buy.textContent = 'CONSULTAR POR WHATSAPP';
+
+    body.append(title, price, buy);
+    article.append(art, body);
+    root.appendChild(article);
+  });
+}
+
+function selectFilter(filter){
+  activeFilter = filter;
+  document.querySelectorAll('.filter').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === filter);
+  });
+  renderProducts();
+  document.getElementById('catalogo').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('product-search').addEventListener('input', renderProducts);
+
+  document.querySelectorAll('.filter').forEach(btn => {
+    btn.addEventListener('click', () => selectFilter(btn.dataset.filter));
+  });
+
+  document.querySelectorAll('.category-link').forEach(card => {
+    card.addEventListener('click', () => selectFilter(card.dataset.filter));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        selectFilter(card.dataset.filter);
+      }
+    });
+  });
+});
+
+loadData();
 </script></body></html>
