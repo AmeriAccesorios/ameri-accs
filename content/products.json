@@ -2,12 +2,12 @@
   "products": [
     {
       "available": true,
-      "featured": false,
+      "featured": true,
       "title": "Lentes de sol ",
       "price": "$4500",
-      "description": "Especial para dias de sol ",
+      "description": "Especial para dáas de sol ",
       "category": "Accesorios",
-      "image": "/uploads/lentes.jpeg"
+      "image": ""
     }
   ]
 }
