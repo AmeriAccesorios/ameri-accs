@@ -41,15 +41,25 @@ header{position:sticky;top:0;z-index:20;background:rgba(12,11,11,.97);color:#fff
 .empty-state{padding:46px 20px;text-align:center;border:1px dashed #cfc0b9;border-radius:14px;color:#766b67}
 @media(max-width:900px){.products.storefront{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-head{align-items:flex-start;flex-direction:column}.search-box{width:100%}}
 @media(max-width:560px){.products.storefront{grid-template-columns:1fr}}
+
+.hero-photo-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;display:none}
+.hero-photo.has-image:before,.hero-photo.has-image:after{display:none}
+.cat-art{overflow:hidden;position:relative}
+.cat-art img{width:100%;height:100%;object-fit:cover;display:none}
+.cat-art.has-image{font-size:0}
+.cat-art.has-image img{display:block}
+.about-shot{overflow:hidden;position:relative}
+.about-shot img{width:100%;height:100%;object-fit:cover;display:none}
+.about-shot.has-image img{display:block}
 </style></head>
 <body>
-<header><div class="nav"><div class="brand"><img src="logo-ameri-header.png" alt="Ameri Accesorios"></div><nav><a href="#inicio">INICIO</a><a href="#catalogo">CATÁLOGO</a><a href="#como-comprar">CÓMO COMPRAR</a><a href="#contacto">CONTACTO</a></nav></div></header>
-<section id="inicio" class="hero"><div class="hero-inner"><div class="hero-copy"><h1 class="serif" id="hero-title">ACCESORIOS QUE HABLAN DE VOS.</h1><p id="hero-text">Accesorios únicos, papelería creativa y detalles para expresar tu estilo.</p><a class="cta" href="#catalogo">VER COLECCIÓN ✦</a></div><div class="hero-photo"></div></div></section>
+<header><div class="nav"><div class="brand"><img id="brand-logo" src="logo-ameri-header.png" alt="Ameri Accesorios"></div><nav><a href="#inicio">INICIO</a><a href="#catalogo">CATÁLOGO</a><a href="#como-comprar">CÓMO COMPRAR</a><a href="#contacto">CONTACTO</a></nav></div></header>
+<section id="inicio" class="hero"><div class="hero-inner"><div class="hero-copy"><h1 class="serif" id="hero-title">ACCESORIOS QUE HABLAN DE VOS.</h1><p id="hero-text">Accesorios únicos, papelería creativa y detalles para expresar tu estilo.</p><a class="cta" href="#catalogo">VER COLECCIÓN ✦</a></div><div class="hero-photo"><img id="hero-image" class="hero-photo-image" alt="Ameri — imagen principal"></div></div></section>
 <section class="section" id="accesorios"><div class="wrap"><h2 class="section-title serif">EXPLORÁ AMERI</h2><div class="categories">
-<div class="cat category-link" data-filter="Accesorios" role="button" tabindex="0"><div class="cat-art">♡</div><h3>ACCESORIOS</h3><p>Collares, pulseras, anillos y más.</p></div>
-<div class="cat category-link" data-filter="Papelería" role="button" tabindex="0"><div class="cat-art">✎</div><h3>PAPELERÍA</h3><p>Stickers, libretas, papeles y más.</p></div>
-<div class="cat category-link" data-filter="Novedades" role="button" tabindex="0"><div class="cat-art">★</div><h3>NOVEDADES</h3><p>Lo último que llegó a Ameri.</p></div>
-<div class="cat category-link" data-filter="Colecciones" role="button" tabindex="0"><div class="cat-art">🎀</div><h3>COLECCIONES</h3><p>Descubrí nuestras colecciones especiales.</p></div>
+<div class="cat category-link" data-filter="Accesorios" role="button" tabindex="0"><div class="cat-art"><img id="category-image-accessories" alt="Accesorios"></div><h3 id="category-title-accessories">ACCESORIOS</h3><p id="category-text-accessories">Collares, pulseras, anillos y más.</p></div>
+<div class="cat category-link" data-filter="Papelería" role="button" tabindex="0"><div class="cat-art"><img id="category-image-stationery" alt="Papelería"></div><h3 id="category-title-stationery">PAPELERÍA</h3><p id="category-text-stationery">Stickers, libretas, papeles y más.</p></div>
+<div class="cat category-link" data-filter="Novedades" role="button" tabindex="0"><div class="cat-art"><img id="category-image-new" alt="Novedades"></div><h3 id="category-title-new">NOVEDADES</h3><p id="category-text-new">Lo último que llegó a Ameri.</p></div>
+<div class="cat category-link" data-filter="Colecciones" role="button" tabindex="0"><div class="cat-art"><img id="category-image-collections" alt="Colecciones"></div><h3 id="category-title-collections">COLECCIONES</h3><p id="category-text-collections">Descubrí nuestras colecciones especiales.</p></div>
 </div></div></section>
 <section class="section alt" id="catalogo">
   <div class="wrap">
@@ -72,13 +82,37 @@ header{position:sticky;top:0;z-index:20;background:rgba(12,11,11,.97);color:#fff
     <div class="empty-state" id="empty-state" hidden>No encontramos productos con esos criterios.</div>
   </div>
 </section>
-<section class="section" style="background:var(--black);color:#fff"><div class="wrap about"><div class="about-copy"><h2 class="serif" id="about-title">AMERI ✦</h2><p id="about-text">Somos un emprendimiento de accesorios y papelería creativa pensado para acompañar tu día a día con detalles que te representan.</p></div><div class="about-gallery"><div class="about-shot"></div><div class="about-shot"></div><div class="about-shot"></div></div></div></section>
-<section class="section" id="como-comprar" style="background:var(--cream)"><div class="wrap"><h2 class="section-title serif">¿CÓMO COMPRAR?</h2><div class="steps"><div class="step"><div class="step-icon">🛍</div><h3>1. ELEGÍ</h3><p>Elegí tu producto favorito.</p></div><div class="step"><div class="step-icon">◉</div><h3>2. CONSULTÁ</h3><p>Escribinos por WhatsApp o Instagram para consultar disponibilidad.</p></div><div class="step"><div class="step-icon">▣</div><h3>3. CONFIRMAMOS</h3><p>Te confirmamos el pedido, el total y los medios de pago.</p></div><div class="step"><div class="step-icon">🚚</div><h3>4. RECIBÍ</h3><p>Coordinamos el envío o retiro.</p></div></div></div></section>
+<section class="section" style="background:var(--black);color:#fff"><div class="wrap about"><div class="about-copy"><h2 class="serif" id="about-title">AMERI ✦</h2><p id="about-text">Somos un emprendimiento de accesorios y papelería creativa pensado para acompañar tu día a día con detalles que te representan.</p></div><div class="about-gallery"><div class="about-shot"><img id="about-image-1" alt="Ameri"></div><div class="about-shot"><img id="about-image-2" alt="Ameri"></div><div class="about-shot"><img id="about-image-3" alt="Ameri"></div></div></div></section>
+<section class="section" id="como-comprar" style="background:var(--cream)"><div class="wrap"><h2 class="section-title serif" id="how-title">¿CÓMO COMPRAR?</h2><div class="steps">
+<div class="step"><div class="step-icon">🛍</div><h3 id="how-step-1-title">1. ELEGÍ</h3><p id="how-step-1-text">Elegí tu producto favorito.</p></div>
+<div class="step"><div class="step-icon">◉</div><h3 id="how-step-2-title">2. CONSULTÁ</h3><p id="how-step-2-text">Escribinos por WhatsApp o Instagram para consultar disponibilidad.</p></div>
+<div class="step"><div class="step-icon">▣</div><h3 id="how-step-3-title">3. CONFIRMAMOS</h3><p id="how-step-3-text">Te confirmamos el pedido, el total y los medios de pago.</p></div>
+<div class="step"><div class="step-icon">🚚</div><h3 id="how-step-4-title">4. RECIBÍ</h3><p id="how-step-4-text">Coordinamos el envío o retiro.</p></div>
+</div></div></section>
 <footer class="footer" id="contacto"><div class="wrap footer-grid"><div><h4 class="serif" style="font-size:30px">Ameri</h4><p>Accesorios, papelería creativa y detalles únicos.</p></div><div><h4>NAVEGACIÓN</h4><p><a href="#inicio">Inicio</a><br><a href="#accesorios">Accesorios</a><br><a href="#como-comprar">Cómo comprar</a></p></div><div><h4>INFORMACIÓN</h4><p>Envíos<br>Formas de pago<br>Preguntas frecuentes</p></div><div><h4>CONTACTO</h4><p>WhatsApp: <a id="wa-link" href="#">Consultar</a><br>Instagram: <span id="instagram">@ameri_accs</span><br><span id="location">San Javier, Santa Fe</span></p></div></div><div class="bottom">© 2026 Ameri Accesorios</div></footer>
 <script>
 let allProducts = [];
 let activeFilter = 'Todos';
 let waNumber = '';
+
+function setImage(id, src, containerId){
+  const img = document.getElementById(id);
+  if(!img) return;
+  const clean = String(src || '').trim();
+  if(clean){
+    img.src = clean;
+    img.style.display = 'block';
+    if(containerId){
+      const container = document.getElementById(containerId);
+      if(container) container.classList.add('has-image');
+    }
+  }
+}
+
+function setText(id, value){
+  const el = document.getElementById(id);
+  if(el && value !== undefined && value !== null && String(value).trim() !== '') el.textContent = value;
+}
 
 async function loadData(){
   try{
@@ -90,12 +124,58 @@ async function loadData(){
     const raw = await prodRes.json();
     allProducts = Array.isArray(raw) ? raw : (raw.products || []);
 
-    document.getElementById('hero-title').textContent = site.hero_title || '';
-    document.getElementById('hero-text').textContent = site.hero_text || '';
-    document.getElementById('about-title').textContent = site.about_title || '';
-    document.getElementById('about-text').textContent = site.about_text || '';
-    document.getElementById('instagram').textContent = site.instagram || '';
-    document.getElementById('location').textContent = site.location || '';
+    setText('hero-title', site.hero_title);
+    setText('hero-text', site.hero_text);
+    setText('about-title', site.about_title);
+    setText('about-text', site.about_text);
+    setText('instagram', site.instagram);
+    setText('location', site.location);
+
+    // Header logo
+    if(site.logo_image){
+      const brand = document.getElementById('brand-logo');
+      if(brand) brand.src = site.logo_image;
+    }
+
+    // Hero
+    if(site.hero_image){
+      const hero = document.querySelector('.hero-photo');
+      if(hero) hero.classList.add('has-image');
+      setImage('hero-image', site.hero_image);
+    }
+
+    // Category text + images
+    const cats = [
+      ['accessories','category_accessories_title','category_accessories_text','category_accessories_image'],
+      ['stationery','category_stationery_title','category_stationery_text','category_stationery_image'],
+      ['new','category_new_title','category_new_text','category_new_image'],
+      ['collections','category_collections_title','category_collections_text','category_collections_image']
+    ];
+    cats.forEach(([key,title,text,image])=>{
+      setText(`category-title-${key}`, site[title]);
+      setText(`category-text-${key}`, site[text]);
+      setImage(`category-image-${key}`, site[image], null);
+      if(site[image]){
+        const art = document.querySelector(`#category-image-${key}`)?.parentElement;
+        if(art) art.classList.add('has-image');
+      }
+    });
+
+    // About gallery
+    [['about-image-1','about_image_1'],['about-image-2','about_image_2'],['about-image-3','about_image_3']].forEach(([id,key])=>{
+      setImage(id, site[key]);
+      if(site[key]){
+        const box = document.getElementById(id)?.parentElement;
+        if(box) box.classList.add('has-image');
+      }
+    });
+
+    // How-to section
+    setText('how-title', site.how_title);
+    for(let i=1;i<=4;i++){
+      setText(`how-step-${i}-title`, site[`how_step_${i}_title`]);
+      setText(`how-step-${i}-text`, site[`how_step_${i}_text`]);
+    }
 
     waNumber = String(site.whatsapp || '').replace(/\D/g,'');
     const waLink = document.getElementById('wa-link');
@@ -112,7 +192,7 @@ async function loadData(){
 function renderProducts(){
   const search = (document.getElementById('product-search')?.value || '').trim().toLowerCase();
   const list = allProducts.filter(p => {
-    if (p.available === false) return false;
+    if(p.available === false) return false;
     const categoryOk = activeFilter === 'Todos' || p.category === activeFilter;
     const text = `${p.title || ''} ${p.description || ''} ${p.category || ''}`.toLowerCase();
     return categoryOk && text.includes(search);
@@ -124,79 +204,34 @@ function renderProducts(){
   empty.hidden = list.length !== 0;
 
   list.forEach(p => {
-    const article = document.createElement('article');
-    article.className = 'card';
-
-    const art = document.createElement('div');
-    art.className = 'product-art';
-
-    if (p.featured) {
-      const badge = document.createElement('span');
-      badge.className = 'product-badge';
-      badge.textContent = 'Destacado';
-      art.appendChild(badge);
-    }
-
-    if (p.image) {
-      const img = document.createElement('img');
-      img.src = p.image;
-      img.alt = p.title || 'Producto Ameri';
-      art.appendChild(img);
-    } else {
-      const ph = document.createElement('div');
-      ph.className = 'placeholder';
-      ph.textContent = '♡';
-      art.appendChild(ph);
-    }
-
-    const body = document.createElement('div');
-    body.className = 'card-body';
-
-    const title = document.createElement('h4');
-    title.textContent = p.title || '';
-
-    const price = document.createElement('div');
-    price.className = 'price';
-    price.textContent = p.price || '';
-
-    const buy = document.createElement('a');
-    buy.className = 'buy';
-    buy.target = '_blank';
-    buy.href = waNumber
-      ? `https://wa.me/${waNumber}?text=${encodeURIComponent('Hola Ameri! Quiero consultar por: ' + (p.title || ''))}`
-      : '#';
-    buy.textContent = 'CONSULTAR POR WHATSAPP';
-
-    body.append(title, price, buy);
-    article.append(art, body);
-    root.appendChild(article);
+    const article = document.createElement('article'); article.className = 'card';
+    const art = document.createElement('div'); art.className = 'product-art';
+    if(p.featured){ const badge=document.createElement('span'); badge.className='product-badge'; badge.textContent='Destacado'; art.appendChild(badge); }
+    if(p.image){ const img=document.createElement('img'); img.src=p.image; img.alt=p.title||'Producto Ameri'; art.appendChild(img); }
+    else { const ph=document.createElement('div'); ph.className='placeholder'; ph.textContent='♡'; art.appendChild(ph); }
+    const body=document.createElement('div'); body.className='card-body';
+    const title=document.createElement('h4'); title.textContent=p.title||'';
+    const price=document.createElement('div'); price.className='price'; price.textContent=p.price||'';
+    const buy=document.createElement('a'); buy.className='buy'; buy.target='_blank';
+    buy.href=waNumber ? `https://wa.me/${waNumber}?text=${encodeURIComponent('Hola Ameri! Quiero consultar por: '+(p.title||''))}` : '#';
+    buy.textContent='CONSULTAR POR WHATSAPP';
+    body.append(title,price,buy); article.append(art,body); root.appendChild(article);
   });
 }
 
 function selectFilter(filter){
   activeFilter = filter;
-  document.querySelectorAll('.filter').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.filter === filter);
-  });
+  document.querySelectorAll('.filter').forEach(btn=>btn.classList.toggle('active',btn.dataset.filter===filter));
   renderProducts();
-  document.getElementById('catalogo').scrollIntoView({behavior:'smooth', block:'start'});
+  document.getElementById('catalogo').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('product-search').addEventListener('input', renderProducts);
-
-  document.querySelectorAll('.filter').forEach(btn => {
-    btn.addEventListener('click', () => selectFilter(btn.dataset.filter));
-  });
-
-  document.querySelectorAll('.category-link').forEach(card => {
-    card.addEventListener('click', () => selectFilter(card.dataset.filter));
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        selectFilter(card.dataset.filter);
-      }
-    });
+document.addEventListener('DOMContentLoaded', ()=>{
+  document.getElementById('product-search').addEventListener('input',renderProducts);
+  document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>selectFilter(btn.dataset.filter)));
+  document.querySelectorAll('.category-link').forEach(card=>{
+    card.addEventListener('click',()=>selectFilter(card.dataset.filter));
+    card.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();selectFilter(card.dataset.filter);} });
   });
 });
 
