@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: AmeriAccesorios/ameri-accs
   branch: main
+  base_url: https://ameri-decap-auth.distribuidoraac250.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "uploads"
 public_folder: "/uploads"
