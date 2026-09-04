@@ -4,6 +4,9 @@ backend:
   branch: main
   base_url: https://ameri-decap-auth.distribuidoraac250.workers.dev
   auth_endpoint: /auth
+  auth:
+    client_id: "TU_CLIENT_ID"
+    scope: "repo"
 
 media_folder: "uploads"
 public_folder: "/uploads"
