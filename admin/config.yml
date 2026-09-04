@@ -5,7 +5,7 @@ backend:
 media_folder: "uploads"
 public_folder: "/uploads"
 
-site_url: https://neon-starburst-54ce7e.netlify.app
+site_url: https://ameriaccesorios.netlify.app
 
 collections:
   - name: "products"
@@ -32,16 +32,49 @@ collections:
 
   - name: "site"
     label: "Página"
-    description: "Editá los textos principales y los datos de contacto."
+    description: "Editá textos, imágenes y datos de contacto de la web."
     files:
-      - label: "Contenido general"
+      - label: "Contenido de la página"
         name: "general"
         file: "content/site.json"
         fields:
+          - { label: "Logo", name: "logo_image", widget: "image", required: false, default: "/logo-ameri-header.png" }
+          - { label: "Imagen principal", name: "hero_image", widget: "image", required: false, hint: "Foto principal del inicio." }
           - { label: "Título principal", name: "hero_title", widget: "string" }
           - { label: "Texto principal", name: "hero_text", widget: "text" }
+
+          - { label: "Imagen categoría Accesorios", name: "category_accessories_image", widget: "image", required: false }
+          - { label: "Título categoría Accesorios", name: "category_accessories_title", widget: "string", default: "ACCESORIOS" }
+          - { label: "Texto categoría Accesorios", name: "category_accessories_text", widget: "text", default: "Collares, pulseras, anillos y más." }
+
+          - { label: "Imagen categoría Papelería", name: "category_stationery_image", widget: "image", required: false }
+          - { label: "Título categoría Papelería", name: "category_stationery_title", widget: "string", default: "PAPELERÍA" }
+          - { label: "Texto categoría Papelería", name: "category_stationery_text", widget: "text", default: "Stickers, libretas, papeles y más." }
+
+          - { label: "Imagen categoría Novedades", name: "category_new_image", widget: "image", required: false }
+          - { label: "Título categoría Novedades", name: "category_new_title", widget: "string", default: "NOVEDADES" }
+          - { label: "Texto categoría Novedades", name: "category_new_text", widget: "text", default: "Lo último que llegó a Ameri." }
+
+          - { label: "Imagen categoría Colecciones", name: "category_collections_image", widget: "image", required: false }
+          - { label: "Título categoría Colecciones", name: "category_collections_title", widget: "string", default: "COLECCIONES" }
+          - { label: "Texto categoría Colecciones", name: "category_collections_text", widget: "text", default: "Descubrí nuestras colecciones especiales." }
+
           - { label: "Título Sobre Ameri", name: "about_title", widget: "string" }
           - { label: "Texto Sobre Ameri", name: "about_text", widget: "text" }
+          - { label: "Imagen Sobre Ameri 1", name: "about_image_1", widget: "image", required: false }
+          - { label: "Imagen Sobre Ameri 2", name: "about_image_2", widget: "image", required: false }
+          - { label: "Imagen Sobre Ameri 3", name: "about_image_3", widget: "image", required: false }
+
+          - { label: "Título Cómo comprar", name: "how_title", widget: "string", default: "¿CÓMO COMPRAR?" }
+          - { label: "Paso 1 - título", name: "how_step_1_title", widget: "string", default: "1. ELEGÍ" }
+          - { label: "Paso 1 - texto", name: "how_step_1_text", widget: "text", default: "Elegí tu producto favorito." }
+          - { label: "Paso 2 - título", name: "how_step_2_title", widget: "string", default: "2. CONSULTÁ" }
+          - { label: "Paso 2 - texto", name: "how_step_2_text", widget: "text", default: "Escribinos por WhatsApp o Instagram para consultar disponibilidad." }
+          - { label: "Paso 3 - título", name: "how_step_3_title", widget: "string", default: "3. CONFIRMAMOS" }
+          - { label: "Paso 3 - texto", name: "how_step_3_text", widget: "text", default: "Te confirmamos el pedido, el total y los medios de pago." }
+          - { label: "Paso 4 - título", name: "how_step_4_title", widget: "string", default: "4. RECIBÍ" }
+          - { label: "Paso 4 - texto", name: "how_step_4_text", widget: "text", default: "Coordinamos el envío o retiro." }
+
           - { label: "WhatsApp (solo números)", name: "whatsapp", widget: "string" }
           - { label: "Instagram", name: "instagram", widget: "string" }
           - { label: "Ubicación", name: "location", widget: "string" }
