@@ -58,3 +58,25 @@ html,body{margin:0;padding:0;background:#eee9e5;color:var(--ink);font-family:Ari
 @media(max-width:560px){
   .preview-hero-copy{padding:34px 25px}.preview-hero h1{font-size:32px}.preview-section{padding:30px 20px}.preview-categories,.preview-steps{grid-template-columns:1fr}.preview-about-gallery{grid-template-columns:1fr}.preview-about-image{height:170px}.preview-footer{flex-wrap:wrap}.preview-footer strong{flex:auto}
 }
+
+.catalog-preview-shell{max-width:1180px;margin:0 auto;background:#fffdfb;min-height:100vh}
+.catalog-preview-heading{padding:38px 34px 22px;text-align:center;background:#f7f2ed;border-bottom:1px solid #dfd1ca}
+.catalog-preview-heading h1{font-family:Georgia,"Times New Roman",serif;font-size:38px;font-weight:400;margin:8px 0 9px}
+.catalog-preview-heading p{margin:0;color:#766d68;font-size:12px}
+.catalog-preview-grid{padding:30px 34px 45px;background:#f7f2ed;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.catalog-preview-card{background:#fff;border:1px solid #dfd1ca;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(38,26,22,.06)}
+.catalog-preview-art{height:270px;background:#eee7e1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.catalog-preview-art img{width:100%;height:100%;object-fit:contain;object-position:center;padding:10px;box-sizing:border-box}
+.catalog-preview-placeholder{font-size:10px;color:#8d7e79}
+.catalog-preview-body{padding:14px}
+.catalog-preview-category{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#947a78;margin-bottom:6px}
+.catalog-preview-body h3{margin:0 0 7px;font-size:15px;font-weight:700}
+.catalog-preview-price{font-family:Georgia,"Times New Roman",serif;font-size:17px;margin-bottom:12px}
+.catalog-preview-button{border:1px solid #bcaeaa;border-radius:9px;text-align:center;padding:9px;font-size:9px;letter-spacing:.04em}
+.catalog-preview-empty{grid-column:1/-1;border:1px dashed #cdbdb6;border-radius:12px;padding:40px;text-align:center;color:#766d68;font-size:12px}
+
+.preview-category-image img,.preview-about-image img{object-fit:cover}
+.preview-hero-image img{object-fit:cover}
+
+@media(max-width:900px){.catalog-preview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.catalog-preview-grid{grid-template-columns:1fr;padding:22px 18px}.catalog-preview-art{height:300px}}
