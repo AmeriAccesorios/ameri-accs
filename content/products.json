@@ -4,11 +4,11 @@
       "price": "$5000",
       "available": true,
       "image_fit": "cover",
-      "image_position": "center",
+      "image_position": "right",
       "featured": true,
       "title": "Lentes de sol ",
-      "image": "/uploads/captura-de-pantalla-2026-09-04-214549.png",
-      "description": "Especial para dáas de sol ",
+      "image": "/uploads/lentes.jpeg",
+      "description": "Especial para días de sol ",
       "category": "Accesorios"
     },
     {
