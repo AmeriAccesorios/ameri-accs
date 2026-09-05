@@ -24,6 +24,14 @@
       "price": "$1000",
       "description": "A",
       "category": "Papelería"
+    },
+    {
+      "available": true,
+      "featured": true,
+      "title": "Esclava ",
+      "price": "$2000",
+      "category": "Accesorios",
+      "description": "Esclavas aa"
     }
   ]
 }
