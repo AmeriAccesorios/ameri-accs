@@ -1,13 +1,15 @@
 {
   "products": [
     {
+      "price": "$5000",
       "available": true,
+      "image_fit": "cover",
+      "image_position": "center",
       "featured": true,
       "title": "Lentes de sol ",
-      "price": "$5000",
+      "image": "/uploads/captura-de-pantalla-2026-09-04-214549.png",
       "description": "Especial para dáas de sol ",
-      "category": "Accesorios",
-      "image": "/uploads/captura-de-pantalla-2026-09-04-214549.png"
+      "category": "Accesorios"
     },
     {
       "available": true,
@@ -15,7 +17,9 @@
       "title": "Prueba ",
       "price": "$100",
       "description": "Prueba ",
-      "category": "Accesorios"
+      "category": "Accesorios",
+      "image_fit": "cover",
+      "image_position": "center"
     },
     {
       "available": true,
@@ -23,7 +27,9 @@
       "title": "Stickers ",
       "price": "$1000",
       "description": "A",
-      "category": "Papelería"
+      "category": "Papelería",
+      "image_fit": "cover",
+      "image_position": "center"
     },
     {
       "available": true,
@@ -31,7 +37,9 @@
       "title": "Esclava ",
       "price": "$2000",
       "category": "Accesorios",
-      "description": "Esclavas aa"
+      "description": "Esclavas aa",
+      "image_fit": "cover",
+      "image_position": "center"
     }
   ]
 }
