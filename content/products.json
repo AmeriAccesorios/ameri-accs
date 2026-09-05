@@ -3,7 +3,7 @@
     {
       "price": "$5000",
       "available": true,
-      "image_fit": "cover",
+      "image_fit": "contain",
       "image_position": "center",
       "featured": true,
       "title": "Lentes de sol ",
