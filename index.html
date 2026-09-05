@@ -51,6 +51,10 @@ header{position:sticky;top:0;z-index:20;background:rgba(12,11,11,.97);color:#fff
 .about-shot{overflow:hidden;position:relative}
 .about-shot img{width:100%;height:100%;object-fit:cover;display:none}
 .about-shot.has-image img{display:block}
+
+.product-art{position:relative;overflow:hidden;background:#eee7e1}
+.product-art .product-art-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(18px);transform:scale(1.08);opacity:.55}
+.product-art .product-art-fg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;padding:12px;box-sizing:border-box;z-index:2}
 </style></head>
 <body>
 <header><div class="nav"><div class="brand"><img id="brand-logo" src="logo-ameri-header.png" alt="Ameri Accesorios"></div><nav><a href="#inicio">INICIO</a><a href="#catalogo">CATÁLOGO</a><a href="#como-comprar">CÓMO COMPRAR</a><a href="#contacto">CONTACTO</a></nav></div></header>
@@ -207,8 +211,11 @@ function renderProducts(){
     const article = document.createElement('article'); article.className = 'card';
     const art = document.createElement('div'); art.className = 'product-art';
     if(p.featured){ const badge=document.createElement('span'); badge.className='product-badge'; badge.textContent='Destacado'; art.appendChild(badge); }
-    if(p.image){ const img=document.createElement('img'); img.src=p.image; img.alt=p.title||'Producto Ameri'; art.appendChild(img); }
-    else { const ph=document.createElement('div'); ph.className='placeholder'; ph.textContent='♡'; art.appendChild(ph); }
+    if(p.image){
+      const bg=document.createElement('img'); bg.className='product-art-bg'; bg.src=p.image; bg.alt=''; bg.setAttribute('aria-hidden','true');
+      const img=document.createElement('img'); img.className='product-art-fg'; img.src=p.image; img.alt=p.title||'Producto Ameri';
+      art.appendChild(bg); art.appendChild(img);
+    } else { const ph=document.createElement('div'); ph.className='placeholder'; ph.textContent='♡'; art.appendChild(ph); }
     const body=document.createElement('div'); body.className='card-body';
     const title=document.createElement('h4'); title.textContent=p.title||'';
     const price=document.createElement('div'); price.className='price'; price.textContent=p.price||'';
