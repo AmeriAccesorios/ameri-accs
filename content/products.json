@@ -3,11 +3,11 @@
     {
       "price": "$5000",
       "available": true,
-      "image_fit": "cover",
-      "image_position": "right",
+      "image_fit": "contain",
+      "image_position": "center",
       "featured": true,
       "title": "Lentes de sol ",
-      "image": "/uploads/lentes.jpeg",
+      "image": "/uploads/ameri-logo-1.jpeg",
       "description": "Especial para días de sol ",
       "category": "Accesorios"
     },
