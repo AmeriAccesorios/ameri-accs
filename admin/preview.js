@@ -116,7 +116,7 @@
             h("h2", {}, "Catálogo")
           ),
           h("div", { className: "preview-product-placeholder" },
-            "El catálogo de productos se actualiza desde “Productos”."
+            "El catálogo se administra desde “Productos”. La vista previa de los productos aparece al editar el catálogo."
           )
         ),
 
@@ -149,6 +149,58 @@
     }
   });
 
+  var CatalogPreview = createClass({
+    render: function () {
+      var entry = this.props.entry;
+      var props = this.props;
+      var rawProducts = entry.getIn(["data", "products"]);
+      var products = rawProducts && rawProducts.toJS ? rawProducts.toJS() : (rawProducts || []);
+
+      var cards = products.map(function (p, idx) {
+        var src = "";
+        if (p.image) {
+          try { src = props.getAsset(p.image).toString(); } catch (e) { src = String(p.image); }
+        }
+
+        return h("article", { className: "catalog-preview-card", key: idx },
+          h("div", { className: "catalog-preview-art" },
+            src
+              ? h("img", { src: src, alt: p.title || "Producto Ameri" })
+              : h("div", { className: "catalog-preview-placeholder" }, "Sin imagen")
+          ),
+          h("div", { className: "catalog-preview-body" },
+            h("div", { className: "catalog-preview-category" }, p.category || ""),
+            h("h3", {}, p.title || "Producto sin nombre"),
+            h("div", { className: "catalog-preview-price" }, p.price || ""),
+            h("div", { className: "catalog-preview-button" }, "CONSULTAR POR WHATSAPP")
+          )
+        );
+      });
+
+      if (!cards.length) {
+        cards = [
+          h("div", { className: "catalog-preview-empty" },
+            "Todavía no hay productos para mostrar en la vista previa."
+          )
+        ];
+      }
+
+      return h("div", { className: "catalog-preview-shell" },
+        h("div", { className: "preview-browser-bar" },
+          h("span", {}, "AMERI / CATÁLOGO"),
+          h("span", {}, "Vista previa en vivo")
+        ),
+        h("div", { className: "catalog-preview-heading" },
+          h("span", { className: "preview-eyebrow" }, "AMERI / SHOP"),
+          h("h1", {}, "Catálogo"),
+          h("p", {}, "Así se verán las tarjetas de tus productos en la página principal.")
+        ),
+        h("div", { className: "catalog-preview-grid" }, cards)
+      );
+    }
+  });
+
   CMS.registerPreviewTemplate("general", GeneralPreview);
+  CMS.registerPreviewTemplate("catalog", CatalogPreview);
   CMS.registerPreviewStyle("./preview.css");
 })();
