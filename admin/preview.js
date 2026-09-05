@@ -165,7 +165,10 @@
         return h("article", { className: "catalog-preview-card", key: idx },
           h("div", { className: "catalog-preview-art" },
             src
-              ? h("img", { src: src, alt: p.title || "Producto Ameri" })
+              ? h("div", { className: "catalog-preview-image-stack" },
+                  h("img", { className: "catalog-preview-bg", src: src, alt: "", "aria-hidden": "true" }),
+                  h("img", { className: "catalog-preview-fg", src: src, alt: p.title || "Producto Ameri" })
+                )
               : h("div", { className: "catalog-preview-placeholder" }, "Sin imagen")
           ),
           h("div", { className: "catalog-preview-body" },
