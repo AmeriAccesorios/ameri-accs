@@ -3,8 +3,8 @@
     {
       "price": "$50000",
       "available": true,
-      "image_fit": "contain",
-      "image_position": "left",
+      "image_fit": "cover",
+      "image_position": "center",
       "featured": true,
       "title": "Lentes de sola",
       "image": "/uploads/lentes.jpeg",
