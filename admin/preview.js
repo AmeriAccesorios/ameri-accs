@@ -162,20 +162,37 @@
           try { src = props.getAsset(p.image).toString(); } catch (e) { src = String(p.image); }
         }
 
-        return h("article", { className: "catalog-preview-card", key: idx },
-          h("div", { className: "catalog-preview-art" },
+        var fit = p.image_fit || "contain";
+        var position = p.image_position || "center";
+
+        return h("article", { className: "card", key: idx },
+          h("div", { className: "product-art" },
             src
-              ? h("div", { className: "catalog-preview-image-stack" },
-                  h("img", { className: "catalog-preview-bg", src: src, alt: "", "aria-hidden": "true" }),
-                  h("img", { className: "catalog-preview-fg", src: src, alt: p.title || "Producto Ameri", style: { objectFit: p.image_fit || "cover", objectPosition: p.image_position || "center" } })
-                )
-              : h("div", { className: "catalog-preview-placeholder" }, "Sin imagen")
+              ? [
+                  h("img", {
+                    className: "product-art-bg",
+                    src: src,
+                    alt: "",
+                    "aria-hidden": "true",
+                    style: { objectFit: "cover", objectPosition: position }
+                  }),
+                  h("img", {
+                    className: "product-art-fg",
+                    src: src,
+                    alt: p.title || "Producto Ameri",
+                    style: { objectFit: fit, objectPosition: position }
+                  })
+                ]
+              : h("div", { className: "placeholder" }, "♡")
           ),
-          h("div", { className: "catalog-preview-body" },
-            h("div", { className: "catalog-preview-category" }, p.category || ""),
-            h("h3", {}, p.title || "Producto sin nombre"),
-            h("div", { className: "catalog-preview-price" }, p.price || ""),
-            h("div", { className: "catalog-preview-button" }, "CONSULTAR POR WHATSAPP")
+          h("div", { className: "card-body" },
+            h("h4", {}, p.title || "Producto sin nombre"),
+            h("div", { className: "price" }, p.price || ""),
+            h("a", {
+              className: "buy",
+              target: "_blank",
+              href: "#"
+            }, "CONSULTAR POR WHATSAPP")
           )
         );
       });
@@ -198,7 +215,7 @@
           h("h1", {}, "Catálogo"),
           h("p", {}, "Así se verán las tarjetas de tus productos en la página principal.")
         ),
-        h("div", { className: "catalog-preview-grid" }, cards)
+        h("div", { className: "products storefront catalog-preview-grid" }, cards)
       );
     }
   });
