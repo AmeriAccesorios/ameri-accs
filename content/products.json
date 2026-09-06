@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "price": "$5000",
+      "price": "$50000",
       "available": true,
       "image_fit": "cover",
       "image_position": "left",
