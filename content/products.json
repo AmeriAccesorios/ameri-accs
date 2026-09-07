@@ -4,42 +4,45 @@
       "price": "$50000",
       "available": true,
       "image_fit": "cover",
-      "image_position": "center",
+      "image_position": "left",
       "featured": true,
       "title": "Lentes de soll",
-      "image": "/uploads/lentes.jpeg",
+      "image": "/uploads/captura-de-pantalla-2026-09-04-214549.png",
       "description": "Especial para días de sol",
       "category": "Accesorios"
     },
     {
+      "price": "$1001",
       "available": true,
+      "image_fit": "cover",
+      "image_position": "left",
       "featured": true,
       "title": "Prueba ",
-      "price": "$100",
+      "image": "/uploads/captura-de-pantalla-2026-09-04-214549.png",
       "description": "Prueba ",
-      "category": "Accesorios",
-      "image_fit": "cover",
-      "image_position": "center"
+      "category": "Accesorios"
     },
     {
+      "price": "$1002",
       "available": true,
+      "image_fit": "cover",
+      "image_position": "left",
       "featured": false,
       "title": "Stickers ",
-      "price": "$1000",
+      "image": "/uploads/captura-de-pantalla-2026-09-04-214549.png",
       "description": "A",
-      "category": "Papelería",
-      "image_fit": "cover",
-      "image_position": "center"
+      "category": "Papelería"
     },
     {
+      "price": "$2003",
       "available": true,
+      "image_fit": "cover",
+      "image_position": "left",
       "featured": true,
       "title": "Esclava ",
-      "price": "$2000",
-      "category": "Accesorios",
+      "image": "/uploads/lentes.jpeg",
       "description": "Esclavas aa",
-      "image_fit": "cover",
-      "image_position": "center"
+      "category": "Accesorios"
     }
   ]
 }
